@@ -66,8 +66,8 @@ applications using it. In particular:
   error condition is terminal not only to the request, but to the entire ABCI
   client](https://github.com/tendermint/tendermint/blob/master/abci/client/socket_client.go#L149).
 
-  The intent of terminating for any error historically seems to have been that
-  all ABCI errors are unrecoverable and henceprotocol fatal.  In practice,
+  The historical intent of terminating for any error seems to have been that
+  all ABCI errors are unrecoverable and hence protocol fatal.  In practice,
   however, this greatly complicates debugging a faulty node, since the only way
   to respond to errors it to panic the node which loses valuable context that
   could have been logged.
